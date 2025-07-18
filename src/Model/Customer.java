@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package Model;
 
 public class Customer {
 }

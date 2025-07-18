@@ -12,7 +12,7 @@ After processing 3–5 houses, it prints the bill for each total amount and cust
 
 
 ## Features
-- Customer Details = {name, house number, how much electricity used}
+- Model.Customer Details = {name, house number, how much electricity used}
 - Should be able to provide the units consumed
 - Must work according to this unit slabs
 - Units above 20 need to be discussed
