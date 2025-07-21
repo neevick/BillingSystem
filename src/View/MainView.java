@@ -17,7 +17,7 @@ public class MainView {
             if (choice == 1) {
                 InsertView.showInsertView();
             } else if (choice == 2) {
-                //CalculateView.showCalculateView();
+                CalculateView.showCalculateView();
             } else if (choice == 3) {
                 //ShowHighestView.showHighestView();
             } else if (choice == 4) {
