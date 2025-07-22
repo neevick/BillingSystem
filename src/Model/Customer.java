@@ -1,6 +1,7 @@
 package Model;
 
 public class Customer {
+
     private int customerId;
     private String customerName;
     private int customerHouseNumber;
@@ -13,7 +14,6 @@ public class Customer {
         this.customerName = customerName;
         this.customerHouseNumber = customerHouseNumber;
     }
-
     public int getCustomerId() {
         return customerId;
     }

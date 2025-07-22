@@ -3,7 +3,6 @@ package View;
 import java.util.Scanner;
 
 public class MainView {
-
     public static void getMainView() {
         Scanner input = new Scanner(System.in);
         while (true) {
@@ -26,5 +25,6 @@ public class MainView {
                 System.out.println("Choose between given options..");
             }
         }
+
     }
 }
