@@ -8,7 +8,6 @@ import Service.CustomerService;
 import java.sql.ResultSet;
 
 public class CustomerController {
-    CustomerService customerService = new CustomerService();
     private final CustomerDao customerDao;
     {
         try {
@@ -23,6 +22,6 @@ public class CustomerController {
     }
 
     public int getcustomerid(String customerName, int customerHouseNumber){
-        return customerService.pullCustomerId(customerName,customerHouseNumber);
+        return customerDao.selectCustomerId(customerName,customerHouseNumber);
     }
 }
