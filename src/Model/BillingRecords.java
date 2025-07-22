@@ -11,7 +11,7 @@ public class BillingRecords {
 
     public BillingRecords(Customer customer, double billAmount, LocalDate billDate, double electricityConsumed) {
         this.billDate = billDate;
-        BillingRecords.electricityConsumed = electricityConsumed;
+        BillingRecords.billAmount = billAmount;
         BillingRecords.customer = customer;
         BillingRecords.electricityConsumed = electricityConsumed;
     }
