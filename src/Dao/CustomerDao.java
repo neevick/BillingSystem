@@ -27,18 +27,21 @@ public class CustomerDao {
         }
     }
 
-    public ResultSet selectCustomer(String customerName, int customerHouseNumber) {
-        ResultSet customerSet = null;
+    public int selectCustomerId(String customerName, int customerHouseNumber) {
+        int customerId = 0;
         try {
             Connection conn = DatabaseConnection.connect();
             String query = "SELECT customerId FROM customer WHERE customerName = ? AND customerHouseNumber = ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, customerName);
             ps.setInt(2, customerHouseNumber);
-            customerSet = ps.executeQuery();
+            ResultSet customerSet = ps.executeQuery();
+            while (customerSet.next()) {
+                customerId = customerSet.getInt("customerId");
+            }
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
-        return customerSet;
+        return customerId;
     }
 }

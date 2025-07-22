@@ -1,9 +1,6 @@
 package Controller;
 
 import Dao.RecordDao;
-import Model.BillingRecords;
-
-import java.time.LocalDate;
 
 public class RecordController {
     private final RecordDao recordDao;
@@ -16,6 +13,10 @@ public class RecordController {
     }
     public boolean addRecord(int customerId, double billAmount, double electricityConsumed) {
         return recordDao.insertrecord(customerId,billAmount,electricityConsumed);
+    }
+
+    public void showBill(){
+        recordDao.showHighestCustomer();
     }
 
 }

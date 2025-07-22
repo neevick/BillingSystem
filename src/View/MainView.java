@@ -18,7 +18,7 @@ public class MainView {
             } else if (choice == 2) {
                 CalculateView.showCalculateView();
             } else if (choice == 3) {
-                //ShowHighestView.showHighestView();
+                ShowHighestView.showHighestView();
             } else if (choice == 4) {
                 break;
             } else {

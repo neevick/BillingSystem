@@ -1,11 +1,11 @@
 package View;
 
-import Controller.BillViewController;
+import Controller.RecordController;
 
 public class ShowHighestView {
     public static void showHighestView(){
-        BillViewController billViewController = new BillViewController();
+        RecordController recordController = new RecordController();
         System.out.println("\nBill Details:");
-        billViewController.showBill();
+        recordController.showBill();
     }
 }

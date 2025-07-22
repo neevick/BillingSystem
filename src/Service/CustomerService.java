@@ -1,32 +1,7 @@
 package Service;
 
-import Dao.CustomerDao;
-import Dao.RecordDao;
-import Model.Customer;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 public class CustomerService {
-
-    public int pullCustomerId(String customerName, int customerHouseNumber) {
-        int customerId = 0;
-        CustomerDao customerDao;
-        try {
-            customerDao = new CustomerDao();
-            ResultSet customerSet = customerDao.selectCustomer(customerName, customerHouseNumber);
-            while (customerSet.next()) {
-                customerId = customerSet.getInt("customerId");
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return customerId;
-    }
-
-
-
-        public double calculateBillAmount ( double electricityConsumed){
+    public double calculateBillAmount ( double electricityConsumed){
             double bill = 0;
             if (electricityConsumed > 30) {
                 double remaining_units = electricityConsumed - 30;
