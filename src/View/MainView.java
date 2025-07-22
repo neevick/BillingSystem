@@ -3,36 +3,28 @@ package View;
 import java.util.Scanner;
 
 public class MainView {
-
-    public static void showMainView(){
+    public static void getMainView() {
         Scanner input = new Scanner(System.in);
-         while(true) {
-            System.out.println("Enter 1: Add a customer");
-            System.out.println("Enter 2: Calculate Bill");
-            System.out.println("Enter 3: Show Highest Paying");
-            System.out.println("Enter 4: Exit");
-            int choice = Integer.parseInt(input.nextLine());
-            if (choice == 0) {
-                System.out.println("Invalid Option, Please enter 1,2 or 3.");
-            }
-            else if(choice == 1) {
-                System.out.println("working");
-            }
-            else if (choice == 2) {
-//                CalculateBillView.showCalculateBillView();
-            }
-            else if (choice == 3) {
-                ShowHighestView.showHighestView();
-            }
-            else if (choice == 4) {
-                System.out.println("Exiting.......!!");
-                break;
-            }
-            else {
-                System.out.println("Invalid output. Please enter 1,2 or 3.");
-            }
+        while (true) {
+            System.out.println("Enter 1 to Add a Customer");
+            System.out.println("Enter 2 to Calculate Electricity Bill");
+            System.out.println("Enter 3 to Show Highest Bill Paying Customer");
+            System.out.println("Enter 4 to Exit");
+            System.out.println("Enter your choice: ");
+            int choice = input.nextInt();
 
+            if (choice == 1) {
+                InsertView.showInsertView();
+            } else if (choice == 2) {
+                CalculateView.showCalculateView();
+            } else if (choice == 3) {
+                //ShowHighestView.showHighestView();
+            } else if (choice == 4) {
+                break;
+            } else {
+                System.out.println("Choose between given options..");
+            }
         }
-            input.close();
+
     }
 }
